@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous">
+    </script>
+    <title>Technical Test</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./btc.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__logo">
+                <a href="./Home.html">
+                    <img src="./img/icon-bitcoin-wallet.png" alt="" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__links">
+                    <li class="nav__link"><i class="fas fa-user"></i></li>
+                    <li class="nav__link">User Name</li>
+                    <li class="nav__link"><i class="fas fa-arrow-down"></i></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="wallets">
+            <div class="wallets__title">
+                <div class="wallets__heading1">
+                    <i class="fa fa-btc" aria-hidden="true"></i>
+                    <h2>BTC Wallets</h2>
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                </div>
+                <h2 class="wallets__amount">0.45 BTC<span>$5,000 USD</span></h2>
+            </div>
+            <div class="btn-box1">
+                <div id="btn"></div>
+                <a href="./btc-wallet.html" class="a">
+                    <button type="button" class="toogle-btn1" ">Transaction</button>
+                </a>
+                <div class="mfix">
+                    <a href="./send.html" type="button" class="toogle-btn2">Send</a>
+                    <a href="./receive.html" type="button" class="toogle-btn3">Received</a>
+                    <a href="./withdraw.html" type="button" class="toogle-btn4">Withdraw</a>
+                </div>
+                </div>
+            <table class="content-table">
+                <thead class="thead">
+                  <tr class="tr">
+                    <th class="th">Transcation Type</th>
+                    <th class="th">Date</th>
+                    <th class="th">Amount in BTC</th>
+                    <th class="th">Amount in USD</th>
+                    <th class="th">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr class="tr">
+                    <td class="td">
+                        <a href="./transaction.html" style="color: black;">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            <span>Sent</span>
+                        </a>
+                    </td>
+                    <td class="td">DD/MM/YYYY</td>
+                    <td class="td">0.18 BTC</td>
+                    <td class="td">$2000</td>
+                    <td class="td">Succesful</td>
+                  </tr>
+                  <tr class="tr">
+                    <td class="td">
+                        <a href="./btc-wallet.html" style="color: black;">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>Received</span>
+                        </a>
+                    </td>
+                    <td class="td">DD/MM/YYYY</td>
+                
+                    <td class="td">0.18 BTC</td>
+                    <td class="td">$2000</td>
+                    <td class="td">Succesful</td>
+                  </tr>
+                  <tr class="tr">
+                    <td class="td">
+                        <a href="./btc-wallet.html" style="color: black;">
+                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                            <span>Withdrawal</span>
+                        </a>
+                    </td>
+                    <td class="td">DD/MM/YYYY</td>
+                 
+                    <td class="td">0.18 BTC</td>
+                    <td class="td">$2000</td>
+                    <td class="td">Succesful</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap");
+
+$colors: (
+    primary: #38475A,
+    secondary: #F94F4F
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body,
+button,
+input {
+    font-family: "montserrat", sans-serif;
+    color: color(primary);
+}
+
+.wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+   
+
+    @media (min-width: 28rem) {
+        padding: 1rem;
+    }
+
+    @media (min-width: 42rem) {
+        padding: 1rem 3rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+//index.html 
+
+.hero {
+    height: 100%;
+    width: 100%;
+    background-color: color(primary);
+    position: absolute;
+
+    .form-box {
+        width: 28rem;
+        height: 32.5rem;
+        position: relative;
+        margin: 22% auto;
+        background: white;
+        padding: 5px;
+        overflow: hidden;
+
+        @media (min-width: 29rem) {
+            widows: 30rem;
+            margin: 6% auto;
+        }
+
+        .btn-box {
+            width: 13.75rem;
+            margin: 2.1875rem auto;
+            position: relative;
+            box-shadow: 3px 3px 3px 0px color(primary);
+            border-radius: 30px;
+          
+            #btn {
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 6.875rem;
+                height: 100%;
+                background: color(secondary);
+                border-radius: 30px;
+                transition: all .5s;
+            }
+
+            .toogle-btn {
+                padding: 10px 29.1px;
+                cursor: pointer;
+                background: transparent;
+                border: 0;
+                color: black;
+                font-weight: bold;
+                outline: none;
+                position: relative;
+            }
+        }
+
+        .social-icons {
+            //margin: 30px auto;
+            display: flex;
+            justify-content: center;
+
+            .s {
+                height: 30px;
+                width: 30px;
+                border: 1px solid color(primary);
+                margin: 0 .45rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: color(primary);
+                font-size: .9rem;
+                border-radius: 50%;
+                transition: all .3s;
+    
+                &:hover {
+                    color: color(secondary);
+                    border-color: color(secondary);
+                }
+            }
+        }
+    }
+}
+
+
+.sign-in-form,
+.sign-up-form,
+.forgot-form {
+    //overflow: hidden;
+    display: flex;
+    position: absolute;
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    //padding: 0 2.4rem;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transition: all .5s;
+
+    .title {
+        font-size: 1.5rem;
+        color: #444;
+        margin-bottom: 20px;
+        margin-top: 90px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1rem;
+        opacity: 50%;
+    }
+
+    .input-field {
+        
+        max-width: 380px;
+        width: 100%;
+        background-color: #f0f0f0;
+        margin: 10px 0;
+        height: 55px;
+        border-radius: 55px;
+        display: grid;
+        grid-template-columns: 15% 85%;
+        padding: 0 .4rem;
+        position: relative;
+     
+        i {
+            text-align: center;
+            line-height: 55px;
+            color: #acacac;
+            font-size: 1.1rem;
+        }
+
+        input {
+            background: none;
+            outline: none;
+            border: none;
+            line-height: 1;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+
+            &::placeholder {
+                color: #aaa;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .submit {
+        width: 9.375rem;
+        height: 2.5rem;
+        border: none;
+        outline: none;
+        border-radius: 49px;
+        cursor: pointer;
+        background-color: color(secondary);
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 10px 0;
+        transition: all .5s;
+        margin-bottom: 1.3rem;
+        
+
+        &:hover {
+            background-color: white;
+            border: 1px solid color(secondary);
+            color: color(secondary);
+        }
+    }
+
+    a.forgot {
+       margin-left: 9rem;
+       margin-top: 1rem;
+       opacity: 70%;
+       color: color(primary);
+       margin-bottom: 2rem;
+    }
+
+    .social-text {
+        padding: .7rem 0;
+        font-size: 1rem;
+    }
+
+}
+
+#sign-in {
+    left: 95px;
+}
+
+#sign-up {
+    left: 30rem;
+}
+
+//home.html
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    border-bottom: 3px solid rgba(0,0,0,0.1);
+
+    &__logo {
+        width: 3rem;
+
+        .logo-img {
+            width: 100%;
+        }
+    }
+
+    .nav {
+        &__links {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__link {
+            margin-left: 1rem;
+            opacity: 60%;
+        }
+    }
+}
+
+.wallets {
+    
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+        border-bottom: 3px solid rgba(0,0,0,0.1);
+        margin-bottom: 3.5rem;
+    }
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__amount {
+        text-align: center;
+        opacity: 80%;
+        span {
+            margin-top: .2rem;
+            display: block;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+
+    .content-table {
+        border-collapse: collapse;
+        margin: 50px auto;
+        font-size: 0.9em;
+        width: 90%;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+    
+        i {
+            color: #f89e1b;
+            font-size: 2.1rem;
+            vertical-align: middle;
+        }
+
+        span {
+            margin-left: 1rem;
+            vertical-align: middle;
+        }
+    }
+
+    .content-table thead tr {
+        background-color: color(primary);;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .content-table th,
+      .content-table td {
+        padding: 19px 15px;
+      }
+      
+      .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+        text-align: center;
+      }
+      
+      .content-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+      
+      .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid color(primary);
+      }
+      
+      .content-table tbody tr.active-row {
+        font-weight: bold;
+        color: color(primary);
+      }
+      
+}
+
+//btc-wallet.html 
+ 
+.wallets__heading1 {
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+
+    @media (min-width: 661px) {
+        flex-direction: row;
+    }
+    
+
+    h2 {
+        margin-right: 1rem;
+        margin-bottom: .7rem;
+        @media (min-width: 661px) {
+            margin-bottom: 0rem;
+           }
+    }
+    
+    i {
+        margin-right: 1rem;
+        color: #f89e1b;
+        font-size: 2.1rem;
+        margin-bottom: .7rem;
+        @media (min-width: 661px) {
+            margin-bottom: 0rem;
+            align-self: center;
+           }
+    }
+
+    .fa-files-o {
+        color: black;
+        font-size: 1.2rem;
+    }
+
+}
+
+.btn-box1 {
+    
+    display: flex;
+    //justify-content: space-between;
+    width: 100%;
+    margin: 35px auto;
+    position: relative;
+    border-bottom: 3px solid rgba(0,0,0,0.1);
+
+    .a {
+      flex: 1;
+    }
+
+   .mfix {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: flex-end;
+
+       @media (min-width: 661px) {
+        flex-direction: row;
+       }
+       
+   }
+
+    .toogle-btn1 {
+        border: none;
+        outline: none;
+        color: color(primary);
+        font-weight: bold;
+        font-size: 1.2rem;
+        background: transparent;
+        transition: all .6s;
+        padding-bottom: 1.2rem;
+        border-bottom: 2px solid color(primary);
+
+    }
+
+    .toogle-btn2,
+    .toogle-btn3,
+    .toogle-btn4 {
+        //margin-left: 6rem;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        opacity: 50%;   
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        color: color(primary);
+        font-weight: bold;
+        outline: none;
+        position: relative;
+        //transition: all .6s;
+
+        @media (min-width: 661px) {
+            margin-left: 3rem;
+            margin-bottom: 1.3rem;
+        }
+
+        @media (min-width: 1178px) {
+            margin-left: 6rem;
+        }
+
+
+        &:hover {
+            opacity: 100%;
+        }
+    }
+
+}
+
