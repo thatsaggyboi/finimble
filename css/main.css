@@ -55,7 +55,7 @@ ul {
 }
 
 .hero .form-box {
-  width: 28rem;
+  width: 30rem;
   height: 32.5rem;
   position: relative;
   margin: 22% auto;
@@ -64,10 +64,18 @@ ul {
   overflow: hidden;
 }
 
+@media (min-width: 26rem) {
+  .hero .form-box {
+    width: 26rem;
+    margin: 6% auto;
+  }
+}
+
 @media (min-width: 29rem) {
   .hero .form-box {
-    width: 30rem;
+    width: 28rem;
     margin: 6% auto;
+    padding-left: -.7rem;
   }
 }
 
@@ -294,6 +302,12 @@ ul {
 
 #sign-in {
   left: 80px;
+}
+
+@media (min-width: 26rem) {
+  #sign-in {
+    left: 60px;
+  }
 }
 
 #sign-up {
